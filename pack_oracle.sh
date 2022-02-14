@@ -1,4 +1,3 @@
-  GNU nano 4.8                                                                                             pack_oracle.sh
 #!/bin/bash
 set -e
 
@@ -28,19 +27,3 @@ echo "}" >> oracleIDs.json
 echo ""
 echo "Success! Created oracleIDs.json:"
 cat oracleIDs.json
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
