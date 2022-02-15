@@ -6,7 +6,7 @@ do
 cd $FOLDER
   if [ -f "oracle.py" ]
   then
-    if [ -f "requirements.txt" ]
+    if [ -f "requirements.txt" ] && [ $DL != "NO" ]
     then
       mkdir -p pip_wheels
       pip3 install wheel
