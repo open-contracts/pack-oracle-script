@@ -20,7 +20,7 @@ cd $FOLDER
   fi
 cd ..
 done
-sed -i '$ s/.$//' oracleIDs.json
+sed -i '$ s/.$//' oracles.json
 echo "}" >> oracles.json
 echo ""
 echo "Success! Created oracleIDs.json:"
