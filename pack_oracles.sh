@@ -23,5 +23,5 @@ done
 sed -i '$ s/.$//' oracles.json
 echo "}" >> oracles.json
 echo ""
-echo "Success! Created oracleIDs.json:"
+echo "Success! Created oracles.json:"
 cat oracles.json
