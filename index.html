@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-echo "{" > oracles.json
+echo "{" > oracleHashes.json
 for FOLDER in $(echo */)
 do
 cd $FOLDER
@@ -16,12 +16,12 @@ cd $FOLDER
     fi
     NAME=$(echo $FOLDER | grep -Eo [^/]*)
     ID=$(cat $(find . -type f | sort) | sha256sum | awk '{print $1}')
-    echo  '    "'$NAME'": "0x'$ID'",' >> ../oracles.json
+    echo  '    "'$NAME'": "0x'$ID'",' >> ../oracleHashes.json
   fi
 cd ..
 done
-sed -i '$ s/.$//' oracles.json
-echo "}" >> oracles.json
+sed -i '$ s/.$//' oracleHashes.json
+echo "}" >> oracleHashes.json
 echo ""
-echo "Success! Created oracles.json:"
-cat oracles.json
+echo "Success! Created oracleHashes.json:"
+cat oracleHashes.json
